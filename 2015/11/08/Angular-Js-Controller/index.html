@@ -3,17 +3,36 @@
 <head>
   <meta charset="utf-8">
   
-  <title>苍晨的技术博文</title>
+  <title>Angular Js Controller | 苍晨的技术博文</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="技术总结 记录 沉淀 积累">
-<meta property="og:type" content="website">
-<meta property="og:title" content="苍晨的技术博文">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="##Angular js 两个Controller之间通信  
+
+什么才是 angular controller之间的正确通信姿势？  
+当一个controller中的数据发生变化的时候另外一个controller中的元素也要做相应的变化。项目中遇到的一个需求就是，当用户上传头完头像的时候，页面中其它用到头像的dom数据也要发生变化。
+
+stackoverflow上面的一个问题: here.
+总结">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Angular Js Controller">
+<meta property="og:url" content="http://yoursite.com/2015/11/08/Angular-Js-Controller/index.html">
 <meta property="og:site_name" content="苍晨的技术博文">
-<meta property="og:description" content="技术总结 记录 沉淀 积累">
+<meta property="og:description" content="##Angular js 两个Controller之间通信  
+
+什么才是 angular controller之间的正确通信姿势？  
+当一个controller中的数据发生变化的时候另外一个controller中的元素也要做相应的变化。项目中遇到的一个需求就是，当用户上传头完头像的时候，页面中其它用到头像的dom数据也要发生变化。
+
+stackoverflow上面的一个问题: here.
+总结">
+<meta property="og:updated_time" content="2015-11-08T09:41:44.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="苍晨的技术博文">
-<meta name="twitter:description" content="技术总结 记录 沉淀 积累">
+<meta name="twitter:title" content="Angular Js Controller">
+<meta name="twitter:description" content="##Angular js 两个Controller之间通信  
+
+什么才是 angular controller之间的正确通信姿势？  
+当一个controller中的数据发生变化的时候另外一个controller中的元素也要做相应的变化。项目中遇到的一个需求就是，当用户上传头完头像的时候，页面中其它用到头像的dom数据也要发生变化。
+
+stackoverflow上面的一个问题: here.
+总结">
   
     <link rel="alternative" href="/atom.xml" title="苍晨的技术博文" type="application/atom+xml">
   
@@ -63,9 +82,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-Angular-Js-Controller" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Angular-Js-Controller" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/blog/2015/11/08/Angular-Js-Controller/" class="article-date">
   <time datetime="2015-11-08T08:42:34.000Z" itemprop="datePublished">2015-11-08</time>
@@ -78,8 +95,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/2015/11/08/Angular-Js-Controller/">Angular Js Controller</a>
+    <h1 class="article-title" itemprop="name">
+      Angular Js Controller
     </h1>
   
 
@@ -143,114 +160,41 @@ eventBus.fireEvent(<span class="string">'fakeEvent'</span>,<span class="string">
     </footer>
   </div>
   
-</article>
-
-
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-Mac下搭建Hexo" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/2015/11/07/Mac下搭建Hexo/" class="article-date">
-  <time datetime="2015-11-07T15:29:32.000Z" itemprop="datePublished">2015-11-07</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/2015/11/07/Mac下搭建Hexo/">Mac下搭建Hexo</a>
-    </h1>
+    <a href="/blog/2015/11/07/Mac下搭建Hexo/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Mac下搭建Hexo</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>##环境安装</p>
-<p><strong>hexo</strong>的版本信息：<strong>3.1.1</strong> 网上大多数的参考资料都是2.x版本的，对于新手来说还是有很多不太一样。</p>
-<p><strong>brew</strong> 安装Mac 软件管理工具brew，命令行方式进行安装：  </p>
-<pre><code>ruby <span class="operator">-e</span> <span class="string">"<span class="variable">$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)</span>"</span>      
-</code></pre><p>直接复制到终端，brew 就可以下载下来了参考:<a href="http://brew.sh" target="_blank" rel="external">http://brew.sh</a></p>
-<p><strong>安装node.js</strong>  </p>
-<pre><code>brew install <span class="keyword">node</span><span class="identifier"></span><span class="title"></span>
-</code></pre><p>使用 node －v 看看是否成功，如果失败继续执行 上面命令  </p>
-<p> <strong>安装Hexo</strong><br> 版本3使用如下命令：  </p>
-<pre><code>npm <span class="operator"><span class="keyword">install</span> hexo-cli -<span class="keyword">g</span>
-//安装一个 <span class="keyword">server</span> 模块
-npm <span class="keyword">install</span> hexo-<span class="keyword">server</span> <span class="comment">--save  </span></span>
-</code></pre><p>次过程可能比较缓慢，安装完成后建立一个你的blog 目录，比如在/Users/xx/blog      执行</p>
-<pre><code><span class="built_in">cd</span>  blog
-hexo init  <span class="comment">// 下面这两个步骤不可有误，顺序不能反</span>
-npm install
-</code></pre><p> Hexo就安装完成了！</p>
-<p> <strong>验证Hexo</strong>        </p>
-<p> 创建一篇文章  </p>
-<pre><code>hexo <span class="keyword">new</span> <span class="string">"test"</span>
-hexo generate
-hexo <span class="keyword">server</span>  
-</code></pre><p>  此时你可以在本地游览器中预览一下生成的静态网页,Ctrl+C关闭。</p>
-<p>  <strong>每次更新博客</strong></p>
-<pre><code>hexo <span class="keyword">clear</span>
-hexo <span class="keyword">generate</span>
-hexo server  
-</code></pre><p> 可以在浏览器中预览。此时没有配置任何的_config.yml</p>
-<p> <strong>整合Githbu</strong></p>
-<p> 此时还需要安装git的一个模块  </p>
-<pre><code>npm <span class="operator"><span class="keyword">install</span> hexo-deployer-git <span class="comment">--save ／／为了部署</span></span>
-</code></pre><p> 首先你和Github之间得有一条连接，必须使用ssh连接，使用ssh连接时候我们得把公钥添加到Github上。   </p>
-<p><strong>创建GitHub公钥</strong>    </p>
-<p>使用的是如下命令</p>
-<pre><code>ssh-keygen -t rsa -C <span class="string">"your_email@example.com"</span> <span class="comment">//这里的邮箱是你在注册git的时候填写的验证邮箱。</span>
-</code></pre><p>默认的公钥生成位置为：~/.ssh/id_rsa.pub把这个文件打开，在GitHub上打开setting-&gt; SSH Keys,添加一个key，title 随便起一个名字，把key复制进去。使用了ssh连接后你每次提交都不需要密码，查看你用什么方式提交的。  </p>
-<pre><code>git remote -v <span class="comment">//我的提交方式如下</span>
-origin    git@github<span class="class">.com</span>:junsoft/blog<span class="class">.git</span> (fetch) ／／origin后面的信息为你git上的提交信息
-origin    git@github<span class="class">.com</span>:junsoft/blog<span class="class">.git</span> (push)
-</code></pre><p>如果你的是https提交做如下修改：</p>
-<pre><code>git remote origin <span class="operator"><span class="keyword">set</span>-<span class="keyword">url</span> &lt;<span class="keyword">URL</span>&gt; 
-把&lt;<span class="keyword">URL</span>&gt;替换成新的ssh的 <span class="keyword">url</span>地址    </span>
-</code></pre><p><strong>Github上创建一个Repostitories</strong>  </p>
-<p> Repostitory name就是你以后博客的发布路径。</p>
-<p> <strong>做一个最简单的配置hexo</strong></p>
-<p> 我们只需要打开  vi _config.yml 在最后添加如下信息，<strong>版本3的type类型必须为git，分支必须为gh-pages</strong>  因为github规定，在项目类型的仓库中，只有该分支中的页面，才会生成网页文件</p>
-<pre><code><span class="comment"># URL</span>
-
-<span class="keyword">*</span><span class="keyword">*</span><span class="keyword">*</span><span class="keyword">*</span>
-root: /blog      //是你要发布的路径，就是仓库的名称
-<span class="keyword">*</span><span class="keyword">*</span><span class="keyword">*</span><span class="keyword">*</span>
-<span class="keyword">*</span><span class="keyword">*</span><span class="keyword">*</span><span class="keyword">*</span>
-deploy:
- type: git
- repository: git<span class="comment">@github.com:junsoft/blog.git</span>
- branch: gh-pages
-</code></pre><p> 此时执行如下命令，就可以访问你博客了：<a href="http://XXX.github.io/blog/" target="_blank" rel="external">http://XXX.github.io/blog/</a>  ／／xxx为你Github的名字。</p>
-<pre><code>hexo <span class="keyword">clear</span>
-hexo <span class="keyword">generate</span>
-hexo deploy
-</code></pre><p> 本篇教程之探讨如何最小化的搭建一个Hello word Hexo,到此搭建结束。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <!--<a data-url="http://yoursite.com/2015/11/07/Mac下搭建Hexo/" data-id="cigqbzh6k0003hqkr1bqdu7hb" class="article-share-link">Share</a>-->
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Hexo博客搭建/">Hexo博客搭建</a></li></ul>
-
-    </footer>
-  </div>
   
 </article>
 
 
 
+<section id="comments">
+  <!-- 多说评论框 start -->
+  <div class="ds-thread" data-thread-key="post-Angular-Js-Controller" data-title="Angular Js Controller" data-url="http://yoursite.com/2015/11/08/Angular-Js-Controller/"></div>
+  <!-- 多说评论框 end -->
+  <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:'junsoft'};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+  <!-- 多说公共JS代码 end -->
+</section>
 
-  
-  
 </section>
         
           <aside id="sidebar">
