@@ -3,36 +3,27 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Angular Js Controller | 苍晨的技术博文</title>
+  <title>Angular js 两个Controller之间通信 | 苍晨的技术博文</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="##Angular js 两个Controller之间通信  
-
-什么才是 angular controller之间的正确通信姿势？  
-当一个controller中的数据发生变化的时候另外一个controller中的元素也要做相应的变化。项目中遇到的一个需求就是，当用户上传头完头像的时候，页面中其它用到头像的dom数据也要发生变化。
-
-stackoverflow上面的一个问题: here.
-总结">
+  <meta name="description" content="什么才是 angular controller之间的正确通信姿势当一个controller中的数据发生变化的时候另外一个controller中的元素也要做相应的变化。项目中遇到的一个需求就是，当用户上传头完头像的时候，页面中其它用到头像的dom数据也要发生变化。
+stackoverflow上面对着问题也有探讨: here.
+总结  
+1 不够优雅的方式：把共享的变量放在$rootScope，只要$">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Angular Js Controller">
+<meta property="og:title" content="Angular js 两个Controller之间通信">
 <meta property="og:url" content="http://yoursite.com/2015/11/08/Angular-Js-Controller/index.html">
 <meta property="og:site_name" content="苍晨的技术博文">
-<meta property="og:description" content="##Angular js 两个Controller之间通信  
-
-什么才是 angular controller之间的正确通信姿势？  
-当一个controller中的数据发生变化的时候另外一个controller中的元素也要做相应的变化。项目中遇到的一个需求就是，当用户上传头完头像的时候，页面中其它用到头像的dom数据也要发生变化。
-
-stackoverflow上面的一个问题: here.
-总结">
-<meta property="og:updated_time" content="2015-11-08T09:41:44.000Z">
+<meta property="og:description" content="什么才是 angular controller之间的正确通信姿势当一个controller中的数据发生变化的时候另外一个controller中的元素也要做相应的变化。项目中遇到的一个需求就是，当用户上传头完头像的时候，页面中其它用到头像的dom数据也要发生变化。
+stackoverflow上面对着问题也有探讨: here.
+总结  
+1 不够优雅的方式：把共享的变量放在$rootScope，只要$">
+<meta property="og:updated_time" content="2015-11-08T09:52:54.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Angular Js Controller">
-<meta name="twitter:description" content="##Angular js 两个Controller之间通信  
-
-什么才是 angular controller之间的正确通信姿势？  
-当一个controller中的数据发生变化的时候另外一个controller中的元素也要做相应的变化。项目中遇到的一个需求就是，当用户上传头完头像的时候，页面中其它用到头像的dom数据也要发生变化。
-
-stackoverflow上面的一个问题: here.
-总结">
+<meta name="twitter:title" content="Angular js 两个Controller之间通信">
+<meta name="twitter:description" content="什么才是 angular controller之间的正确通信姿势当一个controller中的数据发生变化的时候另外一个controller中的元素也要做相应的变化。项目中遇到的一个需求就是，当用户上传头完头像的时候，页面中其它用到头像的dom数据也要发生变化。
+stackoverflow上面对着问题也有探讨: here.
+总结  
+1 不够优雅的方式：把共享的变量放在$rootScope，只要$">
   
     <link rel="alternative" href="/atom.xml" title="苍晨的技术博文" type="application/atom+xml">
   
@@ -96,7 +87,7 @@ stackoverflow上面的一个问题: here.
         
   
     <h1 class="article-title" itemprop="name">
-      Angular Js Controller
+      Angular js 两个Controller之间通信
     </h1>
   
 
@@ -104,16 +95,12 @@ stackoverflow上面的一个问题: here.
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>##Angular js 两个Controller之间通信  </p>
-<blockquote>
-<p>什么才是 angular controller之间的正确通信姿势？  </p>
-<p>当一个controller中的数据发生变化的时候另外一个controller中的元素也要做相应的变化。项目中遇到的一个需求就是，当用户上传头完头像的时候，页面中其它用到头像的dom数据也要发生变化。</p>
-</blockquote>
-<p>stackoverflow上面的一个问题: <a href="http://stackoverflow.com/questions/11252780/whats-the-correct-way-to-communicate-between-controllers-in-angularjs" target="_blank" rel="external">here</a>.</p>
+        <h2 id="什么才是_angular_controller之间的正确通信姿势">什么才是 angular controller之间的正确通信姿势</h2><p>当一个controller中的数据发生变化的时候另外一个controller中的元素也要做相应的变化。项目中遇到的一个需求就是，当用户上传头完头像的时候，页面中其它用到头像的dom数据也要发生变化。</p>
+<p>stackoverflow上面对着问题也有探讨: <a href="http://stackoverflow.com/questions/11252780/whats-the-correct-way-to-communicate-between-controllers-in-angularjs" target="_blank" rel="external">here</a>.</p>
 <p><strong>总结</strong>  </p>
 <p>1 不够优雅的方式：把共享的变量放在$rootScope，只要$rootScope中的共享变量改变了，所有页面中的数据跟着变化，rootscope是各个controller中scope的桥梁。用rootscope定义的值，可以在各个controller中使用。<strong>不推荐造成数据污染</strong>  </p>
-<p>2 使用angular 提供的事件通知 $broadcast和$emit，两者的区别<br>$broadcast事件传播的方向是<strong>向下</strong>的，而<strong>$emit</strong>是向上的。这两种传播方式在复杂的页面布局中都会印象性能。<strong>不推荐</strong>  </p>
-<p>3 推荐的方式是使用 <strong>service</strong>  </p>
+<p>2 使用angular 提供的事件通知 $broadcast和$emit，两者的区别(<a href="http://stackoverflow.com/questions/26752030/rootscope-broadcast-vs-scope-emit" target="_blank" rel="external">$emit VS $broadcast</a>)<br>$broadcast事件传播的方向是<strong>向下</strong>的，而<strong>$emit</strong>是向上的。这两种传播方式在复杂的页面布局中都会影响性能。<strong>不推荐</strong>  </p>
+<p>3 <strong>优雅方式</strong>是使用 <strong>service</strong>  </p>
 <p>在service中使用<strong>回调函数</strong>，把service注入到 controller里接下来看代码：</p>
 <pre><code><span class="built_in">module</span>.factory(<span class="string">"eventBus"</span>,<span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span>{
 <span class="keyword">var</span> obj = {};
@@ -152,7 +139,7 @@ eventBus.fireEvent(<span class="string">'fakeEvent'</span>,<span class="string">
       
     </div>
     <footer class="article-footer">
-      <!--<a data-url="http://yoursite.com/2015/11/08/Angular-Js-Controller/" data-id="cigqbzh5q0000hqkr9eb5v4w2" class="article-share-link">Share</a>-->
+      <!--<a data-url="http://yoursite.com/2015/11/08/Angular-Js-Controller/" data-id="cigqcgqai0000iskrm5vil6qd" class="article-share-link">Share</a>-->
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Angular/">Angular</a></li></ul>
@@ -178,7 +165,7 @@ eventBus.fireEvent(<span class="string">'fakeEvent'</span>,<span class="string">
 
 <section id="comments">
   <!-- 多说评论框 start -->
-  <div class="ds-thread" data-thread-key="post-Angular-Js-Controller" data-title="Angular Js Controller" data-url="http://yoursite.com/2015/11/08/Angular-Js-Controller/"></div>
+  <div class="ds-thread" data-thread-key="post-Angular-Js-Controller" data-title="Angular js 两个Controller之间通信" data-url="http://yoursite.com/2015/11/08/Angular-Js-Controller/"></div>
   <!-- 多说评论框 end -->
   <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
   <script type="text/javascript">
@@ -206,7 +193,7 @@ eventBus.fireEvent(<span class="string">'fakeEvent'</span>,<span class="string">
       <ul>
         
           <li>
-            <a href="/blog/2015/11/08/Angular-Js-Controller/">Angular Js Controller</a>
+            <a href="/blog/2015/11/08/Angular-Js-Controller/">Angular js 两个Controller之间通信</a>
           </li>
         
           <li>
