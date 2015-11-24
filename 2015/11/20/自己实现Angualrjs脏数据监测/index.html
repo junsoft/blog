@@ -5,28 +5,22 @@
   
   <title>实现Angualrjs脏数据监测 | 苍晨的技术博文</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="#Angular的不同点
-谷歌的Angular JS是一个非常强大优秀的前段框架，它颠覆了我们以往对前段的认识，以前说到前端首先想到jQuery去操作Dom元素，但在Angular中切都是数据为王。
-##angular中是如何实现脏数据监测的？
-我们需要用到的类库：lodash.js比较好用的js工具库，用它的目的仅仅是为了操作数组，Angular中并没有用到。lodash 下载  
-loads的">
+  <meta name="description" content="Angular的不同点谷歌的Angular JS是一个非常强大优秀的前段框架，它颠覆了我们以往对前段的认识，以前说到前端首先想到jQuery去操作Dom元素，但在Angular中切都是数据为王。
+angular中是如何实现脏数据监测的？我们需要用到的类库：lodash.js比较好用的js工具库，用它的目的仅仅是为了操作数组，Angular中并没有用到。lodash 下载  
+loads的一些例子:">
 <meta property="og:type" content="article">
 <meta property="og:title" content="实现Angualrjs脏数据监测">
 <meta property="og:url" content="http://yoursite.com/2015/11/20/自己实现Angualrjs脏数据监测/index.html">
 <meta property="og:site_name" content="苍晨的技术博文">
-<meta property="og:description" content="#Angular的不同点
-谷歌的Angular JS是一个非常强大优秀的前段框架，它颠覆了我们以往对前段的认识，以前说到前端首先想到jQuery去操作Dom元素，但在Angular中切都是数据为王。
-##angular中是如何实现脏数据监测的？
-我们需要用到的类库：lodash.js比较好用的js工具库，用它的目的仅仅是为了操作数组，Angular中并没有用到。lodash 下载  
-loads的">
-<meta property="og:updated_time" content="2015-11-23T16:32:27.000Z">
+<meta property="og:description" content="Angular的不同点谷歌的Angular JS是一个非常强大优秀的前段框架，它颠覆了我们以往对前段的认识，以前说到前端首先想到jQuery去操作Dom元素，但在Angular中切都是数据为王。
+angular中是如何实现脏数据监测的？我们需要用到的类库：lodash.js比较好用的js工具库，用它的目的仅仅是为了操作数组，Angular中并没有用到。lodash 下载  
+loads的一些例子:">
+<meta property="og:updated_time" content="2015-11-24T13:14:10.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="实现Angualrjs脏数据监测">
-<meta name="twitter:description" content="#Angular的不同点
-谷歌的Angular JS是一个非常强大优秀的前段框架，它颠覆了我们以往对前段的认识，以前说到前端首先想到jQuery去操作Dom元素，但在Angular中切都是数据为王。
-##angular中是如何实现脏数据监测的？
-我们需要用到的类库：lodash.js比较好用的js工具库，用它的目的仅仅是为了操作数组，Angular中并没有用到。lodash 下载  
-loads的">
+<meta name="twitter:description" content="Angular的不同点谷歌的Angular JS是一个非常强大优秀的前段框架，它颠覆了我们以往对前段的认识，以前说到前端首先想到jQuery去操作Dom元素，但在Angular中切都是数据为王。
+angular中是如何实现脏数据监测的？我们需要用到的类库：lodash.js比较好用的js工具库，用它的目的仅仅是为了操作数组，Angular中并没有用到。lodash 下载  
+loads的一些例子:">
   
     <link rel="alternative" href="/atom.xml" title="苍晨的技术博文" type="application/atom+xml">
   
@@ -98,10 +92,8 @@ loads的">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>#Angular的不同点</p>
-<p>谷歌的Angular JS是一个非常强大优秀的前段框架，它颠覆了我们以往对前段的认识，以前说到前端首先想到jQuery去操作Dom元素，但在Angular中切都是数据为王。</p>
-<p>##angular中是如何实现脏数据监测的？</p>
-<p>我们需要用到的类库：lodash.js比较好用的js工具库，用它的目的仅仅是为了操作数组，Angular中并没有用到。<a href="https://github.com/lodash/lodash" target="_blank" rel="external">lodash 下载</a>  </p>
+        <h1 id="Angular的不同点">Angular的不同点</h1><p>谷歌的Angular JS是一个非常强大优秀的前段框架，它颠覆了我们以往对前段的认识，以前说到前端首先想到jQuery去操作Dom元素，但在Angular中切都是数据为王。</p>
+<h2 id="angular中是如何实现脏数据监测的？">angular中是如何实现脏数据监测的？</h2><p>我们需要用到的类库：lodash.js比较好用的js工具库，用它的目的仅仅是为了操作数组，Angular中并没有用到。<a href="https://github.com/lodash/lodash" target="_blank" rel="external">lodash 下载</a>  </p>
 <p>loads的一些例子:</p>
 <pre><code>var a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];
 var b = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];
@@ -112,9 +104,7 @@ var c= _.<span class="built_in">map</span>(a,function(i){  <span class="comment"
 console.assert(a!==b);
 console.assert(_.isEqual(a,b));
 console.assert(_.isEqual([<span class="number">2</span>,<span class="number">4</span>,<span class="number">6</span>,<span class="number">8</span>],c));
-</code></pre><p>#循序渐进的造轮子</p>
-<p>###版本1：创建一个全局的Scope作用域  </p>
-<pre><code>/＊＊细节按照javascript的惯例 构造函数始终都应该方法名大写,而非构造函数则应该小写主要是为了区分ECMASScript中的其它函数
+</code></pre><h1 id="循序渐进的造轮子">循序渐进的造轮子</h1><h2 id="版本1：创建一个全局的Scope作用域">版本1：创建一个全局的Scope作用域</h2><pre><code>/＊＊细节按照javascript的惯例 构造函数始终都应该方法名大写,而非构造函数则应该小写主要是为了区分ECMASScript中的其它函数
 
 /＊＊什么才是构造函数？
     没有显示的创建对象
@@ -158,8 +148,7 @@ scope.<span class="variable">$watch</span>(
 scope.<span class="variable">$digest</span>();
 
 输出：listener
-</code></pre><p>###版本2：脏数据监测</p>
-<pre><code><span class="keyword">function</span> Scope(){
+</code></pre><h2 id="版本2：脏数据监测">版本2：脏数据监测</h2><pre><code><span class="keyword">function</span> Scope(){
 this.$<span class="variable">$watchers</span>=[]; 
 }
 
@@ -195,8 +184,7 @@ scope.<span class="variable">$digest</span>();
 scope.firstName=<span class="string">'joe2'</span>; 
 scope.<span class="variable">$digest</span>();
 console.log(scope.counter)；／／输出<span class="number">2</span>
-</code></pre><p>###版本3：bug 修复，对没有listenFn的支持，修复了$watch函数</p>
-<pre><code><span class="keyword">function</span> Scope() {
+</code></pre><h2 id="版本3：bug_修复，对没有listenFn的支持，修复了$watch函数">版本3：bug 修复，对没有listenFn的支持，修复了$watch函数</h2><pre><code><span class="keyword">function</span> Scope() {
 this.$<span class="variable">$watchers</span> = [];
 }
 
@@ -224,7 +212,7 @@ var scope = new Scope();
 scope.<span class="variable">$watch</span>(<span class="keyword">function</span>() {
 console.log(<span class="string">'digest listener fired'</span>);//输出
 });
-</code></pre><p>###版本4：如果在另外一个listenerFn中修改了 scope中的值怎么办？<br> 下面的例子：</p>
+</code></pre><h2 id="版本4：如果在另外一个listenerFn中修改了_scope中的值怎么办？">版本4：如果在另外一个listenerFn中修改了 scope中的值怎么办？</h2><p> 下面的例子：</p>
 <pre><code><span class="keyword">function</span> Scope() {
       this.$<span class="variable">$watchers</span> = [];
 }
@@ -284,7 +272,7 @@ console.assert(scope.counterIsTwo); // 输出<span class="literal">false</span>
 scope.<span class="variable">$digest</span>();
 console.assert(scope.counterIsTwo); // <span class="literal">true</span>
 </code></pre><p>这个例子中，第二个watch中的listenerFn 改变了counter的值，但是第一个watch没有被通知到，直到再次调用$digest()函数后才被执行。</p>
-<p>###版本4: 修复在一个$watch中改变另外一个scope中的值，无法检测问题bug<br> 必须等所有的值都被校验结束，没有变化后才退出$deigest,把$digest函数重新命名为$digestOnce(),定义个变量dirty变量，如果dirty变量为true，证明还有数据发生了变化，执行$digest();</p>
+<h2 id="版本4:_修复在一个$watch中改变另外一个scope中的值，无法检测问题bug">版本4: 修复在一个$watch中改变另外一个scope中的值，无法检测问题bug</h2><p> 必须等所有的值都被校验结束，没有变化后才退出$deigest,把$digest函数重新命名为$digestOnce(),定义个变量dirty变量，如果dirty变量为true，证明还有数据发生了变化，执行$digest();</p>
 <pre><code>     Scope.prototype.<span class="variable">$$digestOnce</span> = <span class="function"><span class="keyword">function</span><span class="params">()</span> </span>{
       <span class="keyword">var</span> <span class="keyword">self</span>  = this;
       <span class="keyword">var</span> dirty;
@@ -306,8 +294,7 @@ Scope.prototype.<span class="variable">$digest</span> = <span class="function"><
         dirty = this.<span class="variable">$$digestOnce</span>();
       } <span class="keyword">while</span> (dirty);
 };
-</code></pre><p>###版本5: 在一另外一个watch中改变另外一个scope中的值，会造成死循环。</p>
-<pre><code> <span class="keyword">function</span> Scope() {
+</code></pre><h2 id="版本5:_在一另外一个watch中改变另外一个scope中的值，会造成死循环。">版本5: 在一另外一个watch中改变另外一个scope中的值，会造成死循环。</h2><pre><code> <span class="keyword">function</span> Scope() {
       this.$<span class="variable">$watchers</span> = [];
 }
 
@@ -367,7 +354,7 @@ scope.<span class="variable">$watch</span>(
 // scope.<span class="variable">$digest</span>(); 这段代码会造成 游览器死循环，循环<span class="number">10</span>，<span class="number">0000</span>次后抛出异常。
 
 console.log(scope.counter1);
-</code></pre><p>###版本6:修复死循环问题<br>增加一个标志位，当超过10次后推出循环。其余代码不变，如下：</p>
+</code></pre><h2 id="版本6:修复死循环问题">版本6:修复死循环问题</h2><p>增加一个标志位，当超过10次后推出循环。其余代码不变，如下：</p>
 <pre><code><span class="keyword">function</span> Scope() {
   this.$<span class="variable">$watchers</span> = [];
 }
@@ -429,7 +416,7 @@ scope.<span class="variable">$watch</span>(
 );
 
 scope.<span class="variable">$digest</span>();  //抛除异常后退出
-</code></pre><p>###版本6: 改变比较方式<br>现在所有的比较都用的绝对不等（!==）比较javascript中的基本数据类型，string, number还可以，要是比较数组这种引用类型的时候就，只要值想等就需要用equals（）了，改变$watch函数</p>
+</code></pre><h2 id="版本6:_改变比较方式">版本6: 改变比较方式</h2><p>现在所有的比较都用的绝对不等（!==）比较javascript中的基本数据类型，string, number还可以，要是比较数组这种引用类型的时候就，只要值想等就需要用equals（）了，改变$watch函数</p>
 <pre><code><span class="keyword">function</span> Scope() {
   this.$<span class="variable">$watchers</span> = [];
 }
@@ -522,7 +509,7 @@ console.<span class="keyword">assert</span>(<span class="keyword">scope</span>.c
 <span class="keyword">scope</span>.$digest();
 console.<span class="keyword">assert</span>(<span class="keyword">scope</span>.counterByRef === <span class="number">3</span>);
 console.<span class="keyword">assert</span>(<span class="keyword">scope</span>.counterByValue === <span class="number">4</span>);
-</code></pre><p>###版本7: 处理错误的比较值 NaN（not a number）<br>修复比较函数，其余代码未做任何更改：</p>
+</code></pre><h2 id="版本7:_处理错误的比较值_NaN（not_a_number）">版本7: 处理错误的比较值 NaN（not a number）</h2><p>修复比较函数，其余代码未做任何更改：</p>
 <pre><code><span class="keyword">function</span> Scope() {
   this.$<span class="variable">$watchers</span> = [];
 }
@@ -592,8 +579,7 @@ console.assert(scope.counter === <span class="number">1</span>); ／／ <span cl
 scope.number = parseInt(<span class="string">'wat'</span>, <span class="number">10</span>); // NaN 
 scope.<span class="variable">$digest</span>();
 console.assert(scope.counter === <span class="number">2</span>);//输出 <span class="literal">true</span>
-</code></pre><p>###版本8:把变量加入scope的执行上下文环境中实现 $eval</p>
-<pre><code>Scope.prototype.$<span class="built_in">eval</span> = <span class="function"><span class="keyword">function</span>(<span class="params">expr, locals</span>) </span>{
+</code></pre><h2 id="版本8:把变量加入scope的执行上下文环境中实现_$eval">版本8:把变量加入scope的执行上下文环境中实现 $eval</h2><pre><code>Scope.prototype.$<span class="built_in">eval</span> = <span class="function"><span class="keyword">function</span>(<span class="params">expr, locals</span>) </span>{
   <span class="keyword">return</span> expr(<span class="keyword">this</span>, locals); <span class="comment">//回调，的时候把关键字this作为参数传递给函数。</span>
 };
 </code></pre><p>完整的代码如下：</p>
@@ -656,7 +642,7 @@ scope.number = <span class="number">1</span>;
 scope.<span class="variable">$eval</span>(<span class="keyword">function</span>(theScope) { ／／theScope  变量就是 this，所以输出<span class="number">1</span>
   console.log(<span class="string">'Number during $eval:'</span>, theScope.number);
 });
-</code></pre><p>###版本9:$apply - 把外部的数据，加入scope的执行幻境。<br>其实就是在$apply函数中调用 $eval()函数</p>
+</code></pre><h2 id="版本9:$apply_-_把外部的数据，加入scope的执行幻境。">版本9:$apply - 把外部的数据，加入scope的执行幻境。</h2><p>其实就是在$apply函数中调用 $eval()函数</p>
 <pre><code>Scope.prototype.<span class="variable">$apply</span> = <span class="keyword">function</span>(expr) {
       try {
         return this.<span class="variable">$eval</span>(expr);
@@ -742,7 +728,7 @@ scope.<span class="variable">$apply</span>(<span class="keyword">function</span>
   scope.aValue = <span class="string">'Hello from "outside"'</span>;
 });
 console.assert(scope.counter === <span class="number">1</span>); //<span class="literal">true</span>
-</code></pre><p>###版本10:延迟执行函数实现。<br>在Javascript中要是用到延迟函数可以使用setTimeOut();我们要在$digest()后执行一个函数，这时我们打算自己实现一个队列，来存放要执行的函数，当满足条件后执行队列中的这个函数$evalAsync（），当$digest()函数执行后条件成立。回调asyncQueue 数组中的函数，函数的名字，仅仅是一个变量而已。</p>
+</code></pre><h2 id="版本10:延迟执行函数实现。">版本10:延迟执行函数实现。</h2><p>在Javascript中要是用到延迟函数可以使用setTimeOut();我们要在$digest()后执行一个函数，这时我们打算自己实现一个队列，来存放要执行的函数，当满足条件后执行队列中的这个函数$evalAsync（），当$digest()函数执行后条件成立。回调asyncQueue 数组中的函数，函数的名字，仅仅是一个变量而已。</p>
 <p>首先创建一个队列存放函数：</p>
 <pre><code><span class="keyword">function</span> Scope() {
   this.$<span class="variable">$watchers</span> = [];
@@ -853,8 +839,7 @@ Scope.prototype.<span class="variable">$evalAsync</span> = <span class="keyword"
 <span class="keyword">scope</span>.aValue = <span class="string">"test"</span>;
 <span class="keyword">scope</span>.$digest();
 console.log(<span class="string">"Evaled after digest: "</span>+<span class="keyword">scope</span>.asyncEvaled);  ／／输出 <span class="literal">true</span>
-</code></pre><p>###版本11:修复版本10中的一个bug，当两个$digest同时执行时会对公共变量this.$$asyncQueue = []造成影响，只要$asyncQueue[]长度不为0，第二个$digest()遇到while循环的时候就会执行。所以添加一个标志位this.$$phase 当它不为null的时候就抛出一个异常，证明有函数正在执行，确保时单线程的。</p>
-<pre><code><span class="keyword">function</span> Scope() {
+</code></pre><h2 id="版本11:修复版本10中的一个bug，当两个$digest同时执行时会对公共变量this-$$asyncQueue_=_[]造成影响，只要$asyncQueue[]长度不为0，第二个$digest()遇到while循环的时候就会执行。所以添加一个标志位this-$$phase_当它不为null的时候就抛出一个异常，证明有函数正在执行，确保时单线程的。">版本11:修复版本10中的一个bug，当两个$digest同时执行时会对公共变量this.$$asyncQueue = []造成影响，只要$asyncQueue[]长度不为0，第二个$digest()遇到while循环的时候就会执行。所以添加一个标志位this.$$phase 当它不为null的时候就抛出一个异常，证明有函数正在执行，确保时单线程的。</h2><pre><code><span class="keyword">function</span> Scope() {
   this.$<span class="variable">$watchers</span> = [];
   this.$<span class="variable">$asyncQueue</span> = [];
   this.$<span class="variable">$phase</span> = null;
@@ -1075,8 +1060,7 @@ console.assert(!postDigestInvoked);
 
 scope.<span class="variable">$digest</span>();
 console.assert(postDigestInvoked);
-</code></pre><p>###版本12:异常处理添加 try  catch 使函数变的跟健壮，处理 $evalAsync function, 或者  $$postDigest带来的异常</p>
-<pre><code>Scope.prototype.<span class="variable">$digest</span> = <span class="keyword">function</span>() {
+</code></pre><h2 id="版本12:异常处理添加_try_catch_使函数变的跟健壮，处理_$evalAsync_function,_或者_$$postDigest带来的异常">版本12:异常处理添加 try  catch 使函数变的跟健壮，处理 $evalAsync function, 或者  $$postDigest带来的异常</h2><pre><code>Scope.prototype.<span class="variable">$digest</span> = <span class="keyword">function</span>() {
   var ttl = <span class="number">10</span>;
   var dirty;
   this.<span class="variable">$beginPhase</span>(<span class="string">"$digest"</span>);
@@ -1243,8 +1227,7 @@ scope.<span class="variable">$watch</span>(
 
 scope.<span class="variable">$digest</span>(); 
 console.assert(scope.counter === <span class="number">1</span>);
-</code></pre><p>###版本13:移除watch函数中的对象，即销毁对象，用到了闭包，改造$watch函数，如果只是初始化定义$watch函数，watch函数中的return函数时不会执行的。</p>
-<pre><code>Scope.prototype.<span class="variable">$watch</span> = <span class="keyword">function</span>(watchFn, listenerFn, valueEq) {
+</code></pre><h2 id="版本13:移除watch函数中的对象，即销毁对象，用到了闭包，改造$watch函数，如果只是初始化定义$watch函数，watch函数中的return函数时不会执行的。">版本13:移除watch函数中的对象，即销毁对象，用到了闭包，改造$watch函数，如果只是初始化定义$watch函数，watch函数中的return函数时不会执行的。</h2><pre><code>Scope.prototype.<span class="variable">$watch</span> = <span class="keyword">function</span>(watchFn, listenerFn, valueEq) {
   var self = this;
   var watcher = {
     watchFn: watchFn,
@@ -1413,7 +1396,7 @@ console.assert(scope.counter === <span class="number">2</span>); // <span class=
       
     </div>
     <footer class="article-footer">
-      <!--<a data-url="http://yoursite.com/2015/11/20/自己实现Angualrjs脏数据监测/" data-id="cihde5my30003pekruybzh2kl" class="article-share-link">Share</a>-->
+      <!--<a data-url="http://yoursite.com/2015/11/20/自己实现Angualrjs脏数据监测/" data-id="cihdep8ph0003qfkr81qea2ab" class="article-share-link">Share</a>-->
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/AngularJS/">AngularJS</a></li></ul>
