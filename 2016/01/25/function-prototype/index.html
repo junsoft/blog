@@ -3,21 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>function_prototype | 苍晨的技术博文</title>
+  <title>js中的函数原型prototype | 苍晨的技术博文</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="函数的原型到底是什么？在javascript中原型继承的基础是：原型链查找。
 在javascript中每一个函数都有一个prototype（原型）属性，prototype 本身也是一个对象。原型属性定义的所有属性和方法，所有的实例都可以共享。
 原型链查找的基本概念：1，每个函数function 都有一个原型对象 F.prototype。2，每个函数都可以通过new来变身成为一个类构造函数。new">
 <meta property="og:type" content="article">
-<meta property="og:title" content="function_prototype">
+<meta property="og:title" content="js中的函数原型prototype">
 <meta property="og:url" content="http://yoursite.com/2016/01/25/function-prototype/index.html">
 <meta property="og:site_name" content="苍晨的技术博文">
 <meta property="og:description" content="函数的原型到底是什么？在javascript中原型继承的基础是：原型链查找。
 在javascript中每一个函数都有一个prototype（原型）属性，prototype 本身也是一个对象。原型属性定义的所有属性和方法，所有的实例都可以共享。
 原型链查找的基本概念：1，每个函数function 都有一个原型对象 F.prototype。2，每个函数都可以通过new来变身成为一个类构造函数。new">
-<meta property="og:updated_time" content="2016-01-25T14:49:18.000Z">
+<meta property="og:updated_time" content="2016-01-25T14:52:58.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="function_prototype">
+<meta name="twitter:title" content="js中的函数原型prototype">
 <meta name="twitter:description" content="函数的原型到底是什么？在javascript中原型继承的基础是：原型链查找。
 在javascript中每一个函数都有一个prototype（原型）属性，prototype 本身也是一个对象。原型属性定义的所有属性和方法，所有的实例都可以共享。
 原型链查找的基本概念：1，每个函数function 都有一个原型对象 F.prototype。2，每个函数都可以通过new来变身成为一个类构造函数。new">
@@ -84,7 +84,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      function_prototype
+      js中的函数原型prototype
     </h1>
   
 
@@ -93,7 +93,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h3 id="函数的原型到底是什么？">函数的原型到底是什么？</h3><p>在javascript中原型继承的基础是：<strong>原型链查找</strong>。</p>
-<p>在javascript中每一个函数都有一个prototype（原型）属性，prototype 本身也是一个对象。原型属性定义的所有属性和方法，所有的实例都可以共享。</p>
+<p>在javascript中每一个函数都有一个prototype（原型）属性，prototype 本身也是一个对象。<strong>原型属性定义的所有属性和方法，所有的实例都可以共享</strong>。</p>
 <p><strong>原型链查找的基本概念：</strong><br>1，每个函数function 都有一个原型对象 <strong>F.prototype</strong>。<br>2，每个函数都可以通过new来变身成为一个类构造函数。new F（）；会生成一个新的对象O。<br>3，在调用对象O的属性和方法时例如：O.xxx的时候会先在这个对象的自身查找是否有这个属性或方法，如果有属性或方法则返回这个属性或方法。如果没有这个属性或方法，会去到这个对象的<strong>构造函数的原型对象</strong>上去查找。注意修饰语，什么事构造函数的原型对象。例如O的构造函数原型对象就是：F.prototype。<br>4，F.prototype也是一个对象查找F.prototype.xxx会去F的构造函数对象上去找。重复步骤3.</p>
 <h3 id="实例1">实例1</h3><pre><code><span class="keyword">var</span> F = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{
     name=<span class="string">"123"</span>
@@ -127,7 +127,7 @@ Bar.prototype = foo; <span class="comment">//继承</span>
       
     </div>
     <footer class="article-footer">
-      <!--<a data-url="http://yoursite.com/2016/01/25/function-prototype/" data-id="ciju3bbct0006atkqqhiz9pro" class="article-share-link">Share</a>-->
+      <!--<a data-url="http://yoursite.com/2016/01/25/function-prototype/" data-id="ciju3g5je0006b9kqbfcfpnlk" class="article-share-link">Share</a>-->
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/函数原型-prototype-继承/">函数原型 prototype 继承</a></li></ul>
@@ -153,7 +153,7 @@ Bar.prototype = foo; <span class="comment">//继承</span>
 
 <section id="comments">
   <!-- 多说评论框 start -->
-  <div class="ds-thread" data-thread-key="post-function-prototype" data-title="function_prototype" data-url="http://yoursite.com/2016/01/25/function-prototype/"></div>
+  <div class="ds-thread" data-thread-key="post-function-prototype" data-title="js中的函数原型prototype" data-url="http://yoursite.com/2016/01/25/function-prototype/"></div>
   <!-- 多说评论框 end -->
   <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
   <script type="text/javascript">
@@ -181,7 +181,7 @@ Bar.prototype = foo; <span class="comment">//继承</span>
       <ul>
         
           <li>
-            <a href="/blog/2016/01/25/function-prototype/">function_prototype</a>
+            <a href="/blog/2016/01/25/function-prototype/">js中的函数原型prototype</a>
           </li>
         
           <li>
